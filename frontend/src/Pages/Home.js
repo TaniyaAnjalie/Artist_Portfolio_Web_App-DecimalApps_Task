@@ -18,6 +18,7 @@ function Home() {
           </Col>
         </Row>
       </Container>
+      
       <Footer/>
     </>
   )
