@@ -60,7 +60,7 @@ function Header() {
     })
 
   return (
-    <header className="header" ref={headRef} style={style.header}>
+    <header ref={headRef} style={style.header}>
       <Container>
             <Row>
                 <div className="nav_wrapper d-flex" style={style.nav_wrapper}>
@@ -68,7 +68,7 @@ function Header() {
                         <Link to='/home'> <Image src={Logo} roundedCircle style={style.logo}/> </Link>
                     </div>
 
-                    <div className='navigation'>
+                    <div>
                         <ul className="menu d-flex align-items-right gap-10" style={style.menu}>
                             <Nav
                                 activeKey="/home"
