@@ -9,6 +9,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 root.render(
+
   <>
     <App />
   </>

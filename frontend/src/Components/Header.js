@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react'
+import React from 'react'
 
 import { Link} from 'react-router-dom';
 import { Container, Row, Image, Nav } from 'react-bootstrap';
@@ -22,7 +22,7 @@ const style = {
     },
     menu: {
         textDcoration: "none",
-        color: "purple",
+        color: "#A459D1",
         fontWeight: "1000",
         fontSize: "1.3rem",
     },
@@ -40,16 +40,16 @@ function Header() {
                     </div>
 
                     <div>
-                        <ul className="menu d-flex align-items-right gap-10" style={style.menu}>
+                        <ul className="menu d-flex align-items-right gap-10">
                             <Nav
                                 activeKey="/home"
                                 onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
 
                                 <Nav.Item>
-                                    <Nav.Link href="/home">Home</Nav.Link>
+                                    <Link to="/home" style={style.menu}> Home </Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="About">About</Nav.Link>
+                                    <Link to="About" style={style.menu}> About </Link>
                                 </Nav.Item>
                             </Nav>
                         </ul>

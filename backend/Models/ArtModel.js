@@ -1,7 +1,7 @@
 const express = require('express')
 const {default: mongoose} = require ('mongoose')
 
-const ArtSchema = mongoose.Schema(
+const artSchema = mongoose.Schema(
     {
         title:{
             type:String,
@@ -21,6 +21,6 @@ const ArtSchema = mongoose.Schema(
     }
 )
 
-const Art = mongoose.model('Art', ArtSchema);
+const Art = mongoose.model('Art', artSchema);
 
-module.exports.Art;
+module.exports=Art;

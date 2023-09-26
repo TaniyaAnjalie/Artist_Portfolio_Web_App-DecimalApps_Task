@@ -15,18 +15,18 @@ const style = {
         marginBottom: "1rem"
     },
     p: {
-        color: "purple"
+        color: "#A459D1"
     },
     tagline: {
         fontSize: "1.5rem",
-        color: "purple"
+        color: "#A459D1"
     },
     icon: {
-        color: "#a459d1",
+        color: "#A459D1",
     },
     copyright: {
         textAlign: "center",
-        color: "purple"
+        color: "#A459D1"
     }
     
 }

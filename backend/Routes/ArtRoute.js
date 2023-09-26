@@ -1,19 +1,21 @@
 //create express application on node.js application
 const express = require ('express')
-//create product model
+//create art model
 const Art = require('../Models/ArtModel')
 //create router variable
-const router = express()
+const router = express.Router()
 
-//import ProductControllers
+//import ArtctControllers
 const {
-    postArt
+    postArt, 
+    getArts
 } = require('../Controllers/ArtController')
 
 
 //Routes
 
-router.post ('/' , postArt)  
+router.post ('/' , postArt)
+router.get ('/' , getArts)  
 
 
 module.exports = router;

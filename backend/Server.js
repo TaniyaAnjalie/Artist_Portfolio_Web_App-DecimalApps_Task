@@ -1,34 +1,40 @@
-const express = require ('express')     //create express application on node.js application
-const mongoose = require('mongoose')     //create mongoose variable
+const express = require('express');
+const mongoose = require('mongoose');
 
-// const Art = require('./Models/ArtModel')
+require('dotenv').config();
 
-//import Routes
-// const ArtRoute = require('./Routes/ArtRoute')
+const app = express();
 
-const app = express()     //create app variable
+const ArtRoute = require('./Routes/ArtRoute')
 
-// const MONGO_URL = process.env.MONGO_URL
+app.use(express.json());
 
-// create app --> this add to mongoose - line 104
-app.listen(4000, () => {
-    console.log('Node API is running on port 4000')
-})
+app.use('/art', ArtRoute)
 
-app.get('/', (req, res)=>{
-    res.send('Hello')
-})
+const MONGO_URL = process.env.MONGO_URL;
+const PORT = process.env.PORT || 3000;
 
+// Connect to MongoDB
+mongoose.connect('MONGO_URL', { useNewUrlParser: true, useUnifiedTopology: true })
 
-// mongoose.connect('mongodb+srv://admin:artworkAdmin@artwork.f0skof2.mongodb.net/?retryWrites=true&w=majority')
-//     .then(() => {
-//         console.log('Connected to MongoDB!')
-    
-//         //create app
-//         app.listen(4000, () => {
-//         console.log(`Node API is running on port 4000`)
-//     })
+  .then(() => {
+    console.log('Connected to MongoDB!');
 
-//     }).catch((error) => {
-//         console.log(error)
-//   })
+    // Start the Express server
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+      console.log(`Node API is running on port ${PORT}`);
+    });
+  })
+  .catch((error) => {
+    console.error('Error connecting to MongoDB:', error);
+  });
+
+// app.post('/art', (req, res) => {
+//   console.log(req.body);
+//   res.json({ message: 'Data received successfully' });
+// });
+
+app.get('/', (req, res) => {
+  res.send('Hello');
+});
