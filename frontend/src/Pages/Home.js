@@ -8,21 +8,47 @@ import Footer from '../Components/Footer';
 import Calendar from '../Components/Calendar';
 import Art from '../Components/Art';
 
+import Art1 from '../Assets/Art_1.jpg'
+import Art2 from '../Assets/Art_2.jpg'
+import Art3 from '../Assets/Art_3.jpg'
+import Art4 from '../Assets/Art_4.jpg'
+import Art5 from '../Assets/Art_5.jpg'
 
 const Arts = [
   {
     title: 'Artwork 1',
-    imageSrc: '',
+    imageSrc: Art1,
     description: 'Description for Artwork 1',
+  },
+  {
+    title: 'Artwork 2',
+    imageSrc: Art2,
+    description: 'Description for Artwork 2',
+  },
+  {
+    title: 'Artwork 3',
+    imageSrc: Art3,
+    description: 'Description for Artwork 3',
+  },
+  {
+    title: 'Artwork 4',
+    imageSrc: Art4,
+    description: 'Description for Artwork 4',
+  },
+  {
+    title: 'Artwork 4',
+    imageSrc: Art5,
+    description: 'Description for Artwork 4',
   },
 ];
 
 
 const style = {
   h1:{
-    marginTop: "20px",
-      textAlign: "center",
-      color: "#F266AB"
+    textAlign: "center",
+    color: "#F266AB",
+    marginTop: "30px",
+    marginBottom: "25px"
   },
 
 }

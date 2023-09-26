@@ -1,6 +1,11 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
+
 import Art from './Art'; 
+import Art1 from '../Assets/Art_1.jpg'
+import Art2 from '../Assets/Art_2.jpg'
+import Art3 from '../Assets/Art_3.jpg'
+import Art4 from '../Assets/Art_4.jpg'
 
 
 const artistData = {
@@ -8,27 +13,40 @@ const artistData = {
     bio: 'A brief bio about the artist...',
     artworks: [
       {
-        title: 'Artwork 1',
-        imageSrc: '',
-        description: 'Description for Artwork 1',
+        imageSrc: Art1,
       },
       {
-        title: 'Artwork 2',
-        imageSrc: '',
-        description: 'Description for Artwork 2',
+        imageSrc: Art2,
+      },
+      {
+        imageSrc: Art3,
+      },
+      {
+        imageSrc: Art4,
       },
     ],
 };
 
 
-function Artist() {
+const style = {
+    h1: {
+        color: "#A459D1"
+    },
+    p: {
+        fontSize: "20px",
+        marginBottom: "50px"
+      }
+}
+
+
+function Artist({name, bio}) {
   return (
 
     <Container>
       <Row>
         <Col>
-          <h1>{artistData.name}</h1>
-          <p>{artistData.bio}</p>
+          <h1 style={style.h1}>{name}</h1>
+          <p style={style.p}>{bio}</p>
         </Col>
       </Row>
       <Row>

@@ -7,19 +7,20 @@ import Logo from '../Assets/Logo.png';
 
 const style = {
     footer: {
-        paddingTop: "5px",
-        paddingBottom: "5px",
+        paddingTop: "25px",
+        paddingBottom: "1px",
     },
     logo: {
-        width: "70%",
-        marginBottom: "1rem"
+        width: "60%",
     },
     p: {
-        color: "#A459D1"
+        color: "#A459D1",
+        fontWeight: "500"
     },
     tagline: {
         fontSize: "1.5rem",
-        color: "#A459D1"
+        color: "#A459D1",
+        fontWeight: "500"
     },
     icon: {
         color: "#A459D1",
