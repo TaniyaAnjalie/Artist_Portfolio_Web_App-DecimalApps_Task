@@ -10,11 +10,11 @@ const style = {
     header:{
         width:"100%",
         height: "100px",
+        margin: "0 0 30px 0"
     },
     logo: {
         width: "30%",
         padding: "5px",
-        marginBottom: "3px",
     },
     nav_wrapper :{
         alignItems: "center",
@@ -26,41 +26,12 @@ const style = {
         fontWeight: "1000",
         fontSize: "1.3rem",
     },
-    sticky_header: {
-        width: "100%",
-        height: "110px",
-        lineHeight: "80px",
-        background: "#fff",
-        position: "sticky",
-        top: "0",
-        left: "0",
-        boxShadow: "3px 3px 8px -3px #ddd",
-        zIndex: "999",
-    },
 }
 
 function Header() {
 
-    const headRef = useRef(null)
-
-    const stickyHeaderFunc = () => {
-        window.addEventListener('scroll',()=>{
-            if(document.body.scrollTop >80 || document.documentElement.scrollTop >80){
-                headRef.current.classList.add('sticky_header')
-            }else{
-                headRef.current.classList.remove('sticky_header')
-            }
-        })
-    }
-
-    useEffect(()=>{
-        stickyHeaderFunc()
-
-        return window.removeEventListener('scroll', stickyHeaderFunc)
-    })
-
   return (
-    <header ref={headRef} style={style.header}>
+    <header style={style.header}>
       <Container>
             <Row>
                 <div className="nav_wrapper d-flex" style={style.nav_wrapper}>

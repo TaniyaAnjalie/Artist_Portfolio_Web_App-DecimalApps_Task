@@ -5,20 +5,32 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
+import Calendar from '../Components/Calendar';
+import Art from '../Components/Art';
 
 function Home() {
+
   return (
     <>
       <Header/>
 
       <Container>
-        <Row>
-          <Col>
-            hello
-          </Col>
-        </Row>
+        <Calendar />
       </Container>
-      
+
+      <Container>
+        <div>
+          <h1>Artist Portfolio</h1>
+
+          <div className="portfolio">
+            {/* {Art.map((artwork, index) => (
+              <Art key={index} {...artwork} />
+            ))} */}
+          </div>
+
+        </div>
+      </Container>
+
       <Footer/>
     </>
   )
