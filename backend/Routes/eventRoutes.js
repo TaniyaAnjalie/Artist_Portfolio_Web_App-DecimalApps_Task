@@ -3,14 +3,14 @@ const router = express.Router();
 const Event = require('../Models/Event');
 
 const {
-  postEvent, 
+  createEvent, 
   getEvent,
   getEventByID,
   putEventByID,
   deleteEventByID
-} = require('../Controllers/ArtController')
+} = require('../Controllers/eventController')
 
-router.post('/', postEvent)
+router.post('/', createEvent)
 router.get('/', getEvent)
 router.get('/:id', getEventByID)
 router.put('/:id', putEventByID)

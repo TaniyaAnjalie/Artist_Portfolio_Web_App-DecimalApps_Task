@@ -1,7 +1,7 @@
 const Event = require('../Models/Event')
 
 // Create an event
-const postEvent = async(req, res) => {
+const createEvent = async(req, res) => {
     console.log(req.body);
     res.send(req.body)
     try {
@@ -13,7 +13,7 @@ const postEvent = async(req, res) => {
     }
   };
   
-  // Read all events
+  // Get all events
  const getEvent = async(req, res) => {
     console.log(req.body);
     res.send(req.body)
@@ -25,7 +25,7 @@ const postEvent = async(req, res) => {
     }
   };
   
-  // Read a single event by ID
+  // get a single event by ID
   const getEventByID = async(req, res) => {
     console.log(req.body);
     res.send(req.body)
@@ -73,7 +73,7 @@ const postEvent = async(req, res) => {
   };
 
   module.exports = {
-    postEvent,
+    createEvent,
     getEvent,
     getEventByID,
     putEventByID,
