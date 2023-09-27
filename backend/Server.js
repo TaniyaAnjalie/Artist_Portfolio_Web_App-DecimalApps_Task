@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://admin:artworkAdmin@artwork.f0skof2.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://admin:<password>>@artwork.f0skof2.mongodb.net/?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
