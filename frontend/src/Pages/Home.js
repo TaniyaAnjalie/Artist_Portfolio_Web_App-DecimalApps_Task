@@ -1,18 +1,25 @@
 import React from 'react'
 
 import { Container, Row, Col } from 'react-bootstrap';
-// import { Link } from 'react-router-dom';
 
 import Header from '../Components/Header';
 import Footer from '../Components/Footer';
 import Calendar from '../Components/Calendar';
 import Art from '../Components/Art';
-
 import Art1 from '../Assets/Art_1.jpg'
 import Art2 from '../Assets/Art_2.jpg'
 import Art3 from '../Assets/Art_3.jpg'
 import Art4 from '../Assets/Art_4.jpg'
 import Art5 from '../Assets/Art_5.jpg'
+
+
+const Cevents = [];
+// Transform event data for the calendar
+const events = Cevents.map((event) => ({
+  title: event.eventName,
+  date: event.date,
+  description: event.description,
+}));
 
 const Arts = [
   {
@@ -59,7 +66,7 @@ function Home() {
       <Header/>
 
       <Container>
-        <Calendar />
+        <Calendar events={events}/>
       </Container>
 
       <Container>
